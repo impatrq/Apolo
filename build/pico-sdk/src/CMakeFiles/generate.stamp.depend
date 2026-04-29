@@ -1,7 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt
-C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/cmake/on_device.cmake
-C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/cmake/rp2_common.cmake
-C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040.cmake
-C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
-C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
