@@ -1,0 +1,148 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 6
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_bootrom_headers::@5b7a36be3eedb58ea3ff",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_bootrom_headers_headers::@5b7a36be3eedb58ea3ff"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "boot_picoboot_headers::@0e1ac33acb3c4960625d"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "boot_bootrom_headers::@441e0f260b6c69e5f9a4"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_base_headers::@33789676aab31f619839"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_boot_lock_headers::@8bad4e60087af3637f83"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pico_flash_headers::@d0c4b60a6f02ef13fa32"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_bootrom_headers_headers::@5b7a36be3eedb58ea3ff"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "boot_picoboot_headers::@0e1ac33acb3c4960625d"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "boot_bootrom_headers::@441e0f260b6c69e5f9a4"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_base_headers::@33789676aab31f619839"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_boot_lock_headers::@8bad4e60087af3637f83"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pico_flash_headers::@d0c4b60a6f02ef13fa32"
+		}
+	],
+	"name" : "pico_bootrom_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_bootrom",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\renzo\Downloads\Apolo\build\CMakeFiles\fcd569e7650625e3eec10650d8715254\bs2_default.bin.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\renzo\Downloads\Apolo\build\CMakeFiles\fcd569e7650625e3eec10650d8715254\bs2_default_padded_checksummed.S.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\renzo\.pico-sdk\sdk\2.2.0\src\rp2040\boot_stage2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\renzo\Downloads\Apolo\build\pico-sdk\src\rp2040\boot_stage2\bs2_default_padded_checksummed.S" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F5F5B046-C94C-327A-A5D5-92A77B0DFC8B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

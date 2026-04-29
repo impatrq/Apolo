@@ -1,0 +1,41 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/boot_uf2_headers/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "boot_uf2_headers::@2bfc8393dcdd6788a3f6",
+	"name" : "boot_uf2_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/common/boot_uf2_headers",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/boot_uf2_headers"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

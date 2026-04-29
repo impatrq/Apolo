@@ -1,0 +1,158 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootsel_via_double_reset/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_bootsel_via_double_reset::@b20ac36d0bc1e6749031",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_bootsel_via_double_reset_headers::@b20ac36d0bc1e6749031"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_bootsel_via_double_reset_headers::@b20ac36d0bc1e6749031"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_bootrom::@5b7a36be3eedb58ea3ff"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_time::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pico_binary_info::@2be179807169b375a57c"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_bootsel_via_double_reset_headers::@b20ac36d0bc1e6749031"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_bootsel_via_double_reset_headers::@b20ac36d0bc1e6749031"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_bootrom::@5b7a36be3eedb58ea3ff"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_time::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pico_binary_info::@2be179807169b375a57c"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootsel_via_double_reset/pico_bootsel_via_double_reset.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_bootsel_via_double_reset",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_bootsel_via_double_reset",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootsel_via_double_reset"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

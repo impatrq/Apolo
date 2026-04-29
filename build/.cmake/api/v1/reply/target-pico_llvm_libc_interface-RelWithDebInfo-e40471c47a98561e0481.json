@@ -1,0 +1,144 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 6
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_llvm_libc_interface::@92c8088a6d6c1413af70",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_llvm_libc_interface_headers::@92c8088a6d6c1413af70"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_atomic::@897a091375db775bac4c"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_llvm_libc_interface_headers::@92c8088a6d6c1413af70"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_stdio::@d2414feb1b3aa36aaee4"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_llvm_libc_interface_headers::@92c8088a6d6c1413af70"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_atomic::@897a091375db775bac4c"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_llvm_libc_interface_headers::@92c8088a6d6c1413af70"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_stdio::@d2414feb1b3aa36aaee4"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/llvm_libc_interface.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_llvm_libc_interface",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_clib_interface",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

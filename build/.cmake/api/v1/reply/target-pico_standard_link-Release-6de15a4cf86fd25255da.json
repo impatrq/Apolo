@@ -1,0 +1,105 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_link/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 159,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_standard_link::@128212700d4d2b2d40a9",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_standard_link_headers::@128212700d4d2b2d40a9"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "boot_stage2_headers::@efaae0dfea37ab6992ce"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "bs2_default_library::@efaae0dfea37ab6992ce"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_standard_link_headers::@128212700d4d2b2d40a9"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "boot_stage2_headers::@efaae0dfea37ab6992ce"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "bs2_default_library::@efaae0dfea37ab6992ce"
+		}
+	],
+	"name" : "pico_standard_link",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_standard_link",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_link"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

@@ -1,0 +1,702 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 10
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 13
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 13
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 16
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 16
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 19
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 19
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 22
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 22
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 25
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 25
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 28
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 28
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 31
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 31
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 34
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 34
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 37
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 37
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 40
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 40
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 43
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 43
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 46
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 46
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 49
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 49
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 52
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 52
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 55
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 55
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_runtime::@8bd1207636785ef5e642",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_base::@33789676aab31f619839"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_runtime_init::@433da35893c4395dd551"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "hardware_gpio_headers::@ef60da2a8d08f1b751dd"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "hardware_uart::@6760ac481d50fbd80aa4"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "pico_bit_ops::@29d4edaf53e96bb95837"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "pico_divider::@07fc49347ff7302362f1"
+		},
+		{
+			"backtrace" : 20,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "pico_double::@ab259a064a43323d6260"
+		},
+		{
+			"backtrace" : 23,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 24,
+			"id" : "pico_int64_ops::@ab1ccc05594a9ba490cb"
+		},
+		{
+			"backtrace" : 26,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 27,
+			"id" : "pico_float::@34bdbf50623dcb85eac7"
+		},
+		{
+			"backtrace" : 29,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 30,
+			"id" : "pico_malloc::@4c8c2e90fff1e2188e9b"
+		},
+		{
+			"backtrace" : 32,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 33,
+			"id" : "pico_mem_ops::@33009e7ae98248310cdb"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 36,
+			"id" : "pico_atomic::@897a091375db775bac4c"
+		},
+		{
+			"backtrace" : 38,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 39,
+			"id" : "pico_cxx_options::@7742b64696d4b91efa85"
+		},
+		{
+			"backtrace" : 41,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 42,
+			"id" : "pico_standard_binary_info::@c280859e476eb653c3ad"
+		},
+		{
+			"backtrace" : 44,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 45,
+			"id" : "pico_standard_link::@128212700d4d2b2d40a9"
+		},
+		{
+			"backtrace" : 47,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 48,
+			"id" : "pico_sync::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 50,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 51,
+			"id" : "pico_printf::@7ce8e26071a1a2a63905"
+		},
+		{
+			"backtrace" : 53,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 54,
+			"id" : "pico_crt0::@16576375c08f837c0ec0"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 57,
+			"id" : "pico_clib_interface::@92c8088a6d6c1413af70"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_base::@33789676aab31f619839"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_runtime_init::@433da35893c4395dd551"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "hardware_gpio_headers::@ef60da2a8d08f1b751dd"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "hardware_uart::@6760ac481d50fbd80aa4"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "pico_bit_ops::@29d4edaf53e96bb95837"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 18,
+			"id" : "pico_divider::@07fc49347ff7302362f1"
+		},
+		{
+			"backtrace" : 20,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "pico_double::@ab259a064a43323d6260"
+		},
+		{
+			"backtrace" : 23,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 24,
+			"id" : "pico_int64_ops::@ab1ccc05594a9ba490cb"
+		},
+		{
+			"backtrace" : 26,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 27,
+			"id" : "pico_float::@34bdbf50623dcb85eac7"
+		},
+		{
+			"backtrace" : 29,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 30,
+			"id" : "pico_malloc::@4c8c2e90fff1e2188e9b"
+		},
+		{
+			"backtrace" : 32,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 33,
+			"id" : "pico_mem_ops::@33009e7ae98248310cdb"
+		},
+		{
+			"backtrace" : 35,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 36,
+			"id" : "pico_atomic::@897a091375db775bac4c"
+		},
+		{
+			"backtrace" : 38,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 39,
+			"id" : "pico_cxx_options::@7742b64696d4b91efa85"
+		},
+		{
+			"backtrace" : 41,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 42,
+			"id" : "pico_standard_binary_info::@c280859e476eb653c3ad"
+		},
+		{
+			"backtrace" : 44,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 45,
+			"id" : "pico_standard_link::@128212700d4d2b2d40a9"
+		},
+		{
+			"backtrace" : 47,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 48,
+			"id" : "pico_sync::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 50,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 51,
+			"id" : "pico_printf::@7ce8e26071a1a2a63905"
+		},
+		{
+			"backtrace" : 53,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 54,
+			"id" : "pico_crt0::@16576375c08f837c0ec0"
+		},
+		{
+			"backtrace" : 56,
+			"id" : "pico_runtime_headers::@8bd1207636785ef5e642"
+		},
+		{
+			"backtrace" : 57,
+			"id" : "pico_clib_interface::@92c8088a6d6c1413af70"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_runtime",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_runtime",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

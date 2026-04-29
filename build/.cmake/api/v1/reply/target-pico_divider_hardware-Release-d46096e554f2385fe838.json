@@ -1,0 +1,91 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 38,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_divider_hardware::@07fc49347ff7302362f1",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_divider_hardware_headers::@07fc49347ff7302362f1"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_divider_hardware_explicit::@07fc49347ff7302362f1"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_divider_hardware_headers::@07fc49347ff7302362f1"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_divider_hardware_explicit::@07fc49347ff7302362f1"
+		}
+	],
+	"name" : "pico_divider_hardware",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_divider",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_divider"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

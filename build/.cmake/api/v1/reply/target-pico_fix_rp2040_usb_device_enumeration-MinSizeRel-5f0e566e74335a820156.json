@@ -1,0 +1,158 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_fix_rp2040_usb_device_enumeration::@d991e5c4e714770d926b",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_fix_rp2040_usb_device_enumeration_headers::@d991e5c4e714770d926b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_fix_rp2040_usb_device_enumeration_headers::@d991e5c4e714770d926b"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "hardware_structs::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_gpio::@ef60da2a8d08f1b751dd"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pico_time::@ed071ba82cca6745b785"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_fix_rp2040_usb_device_enumeration_headers::@d991e5c4e714770d926b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_fix_rp2040_usb_device_enumeration_headers::@d991e5c4e714770d926b"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "hardware_structs::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_gpio::@ef60da2a8d08f1b751dd"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pico_time::@ed071ba82cca6745b785"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_fix_rp2040_usb_device_enumeration",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_fix/rp2040_usb_device_enumeration"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}
