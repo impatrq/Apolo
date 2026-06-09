@@ -1,0 +1,228 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries",
+			"add_dependencies",
+			"pico_generate_pio_header"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_status_led/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 9
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 265,
+				"parent" : 14
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_status_led::@c2e5f126dae27421b95b",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_status_led_headers::@c2e5f126dae27421b95b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_status_led_headers::@c2e5f126dae27421b95b"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "hardware_gpio::@ef60da2a8d08f1b751dd"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_pio::@e01f79172179c7736f7b"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "pico_status_led_headers::@c2e5f126dae27421b95b"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "pico_cyw43_driver::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "cyw43_driver_picow::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "pico_async_context_threadsafe_background::@2bada4798cde7aec159e"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_status_led_headers::@c2e5f126dae27421b95b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_status_led_headers::@c2e5f126dae27421b95b"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "hardware_gpio::@ef60da2a8d08f1b751dd"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_pio::@e01f79172179c7736f7b"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "pico_status_led_headers::@c2e5f126dae27421b95b"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "pico_cyw43_driver::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "cyw43_driver_picow::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "pico_async_context_threadsafe_background::@2bada4798cde7aec159e"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_status_led/status_led.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_status_led",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 15,
+			"id" : "pico_status_led_ws2812_pio_h::@c2e5f126dae27421b95b"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_status_led",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_status_led"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

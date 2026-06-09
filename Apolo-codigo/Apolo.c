@@ -13,17 +13,18 @@ typedef struct {
     uint32_t max_pulse_us;
 } servo_config_t;
 
-#define SERVO_COUNT 5
+#define SERVO_COUNT 6
 static const servo_config_t servos[SERVO_COUNT] = {
     {0, 500u, 1510u, 2500u},   // Pulgar
-    {2, 500u, 1510u, 2500u},   // �ndice
-    {4, 500u, 1510u, 2500u},   // Medio (servo de mu�eca)
+    {2, 500u, 1510u, 2500u},   // Índice
+    {4, 500u, 1510u, 2500u},   // Medio
     {6, 500u, 1510u, 2500u},   // Anular
-    {8, 500u, 1510u, 2500u}    // Me�ique
+    {8, 500u, 1510u, 2500u},   // Meñique
+    {10, 500u, 1510u, 2500u}   // Muñeca
 };
 
-// Servo de mu�eca (controlado por se�ales de giro horario/antihorario)
-#define SERVO_MUNECA_IDX 2  // �ndice del servo de mu�eca (medio)
+// Servo de muñeca (controlado por señales de giro horario/antihorario)
+#define SERVO_MUNECA_IDX 5  // Índice del servo de muñeca
 #define SERVO_PULGAR_IDX 0  // �ndice del pulgar
 #define SERVO_INDICE_IDX 1  // �ndice del �ndice
 

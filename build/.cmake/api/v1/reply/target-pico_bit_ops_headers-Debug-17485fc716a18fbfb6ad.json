@@ -1,0 +1,62 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_bit_ops_headers/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_bit_ops_headers::@4c138bd7234ff2fdcb61",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "pico_base_headers::@33789676aab31f619839"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "pico_base_headers::@33789676aab31f619839"
+		}
+	],
+	"name" : "pico_bit_ops_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/common/pico_bit_ops_headers",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_bit_ops_headers"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

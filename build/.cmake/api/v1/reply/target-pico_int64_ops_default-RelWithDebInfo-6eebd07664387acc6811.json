@@ -1,0 +1,62 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_int64_ops_default::@ab1ccc05594a9ba490cb",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "pico_int64_ops_pico::@ab1ccc05594a9ba490cb"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "pico_int64_ops_pico::@ab1ccc05594a9ba490cb"
+		}
+	],
+	"name" : "pico_int64_ops_default",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_int64_ops",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_int64_ops"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

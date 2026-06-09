@@ -1,0 +1,158 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 6
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_flash::@d0c4b60a6f02ef13fa32",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_flash_headers::@d0c4b60a6f02ef13fa32"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_multicore_headers::@9a13c1d01dbacaad7b33"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_flash_headers::@d0c4b60a6f02ef13fa32"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_time::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "hardware_sync::@786cdbe0562c81b78078"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_flash_headers::@d0c4b60a6f02ef13fa32"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_multicore_headers::@9a13c1d01dbacaad7b33"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_flash_headers::@d0c4b60a6f02ef13fa32"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_time::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "hardware_sync::@786cdbe0562c81b78078"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash/flash.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_flash",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_flash",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_flash"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}
