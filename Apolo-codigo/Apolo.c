@@ -40,6 +40,13 @@ static const servo_config_t servos[SERVO_COUNT] = {
 #define ADS1115_CONVERSION_REGISTER 0x00
 #define ADS1115_CONFIG_REGISTER 0x01
 
+// Multiplexor de 4 canales con salida a ADS1115 AIN0.
+// S0-S2 seleccionan el canal. No se usa S3 porque solo hay 4 entradas activas.
+#define MUX_PIN_S0 18  // GP18
+#define MUX_PIN_S1 19  // GP19
+#define MUX_PIN_S2 20  // GP20
+#define MUX_CHANNEL_COUNT 4
+
 // Variables de estado
 static bool modo_5_servos = true;  // true = 5 servos, false = 2 servos (pulgar+�ndice)
 
@@ -79,15 +86,17 @@ static bool ads1115_read_conversion(uint8_t addr, int16_t *value) {
     return true;
 }
 
-static bool ads1115_read_channel(uint8_t addr, uint8_t channel, uint16_t *raw) {
-    uint16_t config;
-    switch (channel) {
-        case 0: config = 0xC583; break; // AIN0-GND, 128SPS
-        case 1: config = 0xD583; break; // AIN1-GND, 128SPS
-        case 2: config = 0xE583; break; // AIN2-GND, 128SPS
-        case 3: config = 0xF583; break; // AIN3-GND, 128SPS
-        default: return false;
-    }
+static void mux_select_channel(uint8_t channel) {
+    gpio_put(MUX_PIN_S0, channel & 0x1);
+    gpio_put(MUX_PIN_S1, (channel >> 1) & 0x1);
+    gpio_put(MUX_PIN_S2, (channel >> 2) & 0x1);
+}
+
+static bool ads1115_read_mux_channel(uint8_t addr, uint8_t mux_channel, uint16_t *raw) {
+    mux_select_channel(mux_channel);
+    sleep_ms(1);
+
+    uint16_t config = 0xC583; // AIN0-GND, 128SPS, +/-4.096V
     if (!ads1115_write_config(addr, config)) return false;
     sleep_ms(10);
 
@@ -98,11 +107,11 @@ static bool ads1115_read_channel(uint8_t addr, uint8_t channel, uint16_t *raw) {
     return true;
 }
 
-// Leer los 4 canales del ADS1115
+// Leer los 4 canales del multiplexor conectados a la entrada AIN0 del ADS1115
 static bool leer_senales_ads1115(senales_control_t *datos) {
-    for (uint8_t canal = 0; canal < 4; canal++) {
+    for (uint8_t canal = 0; canal < MUX_CHANNEL_COUNT; canal++) {
         uint16_t valor_raw;
-        if (!ads1115_read_channel(ADS1115_ADDR, canal, &valor_raw)) {
+        if (!ads1115_read_mux_channel(ADS1115_ADDR, canal, &valor_raw)) {
             return false;
         }
         
@@ -212,6 +221,15 @@ int main() {
     gpio_pull_up(ADS1115_SDA_PIN);
     gpio_pull_up(ADS1115_SCL_PIN);
 
+    // Inicializar pines del multiplexor
+    gpio_init(MUX_PIN_S0);
+    gpio_init(MUX_PIN_S1);
+    gpio_init(MUX_PIN_S2);
+    gpio_set_dir(MUX_PIN_S0, GPIO_OUT);
+    gpio_set_dir(MUX_PIN_S1, GPIO_OUT);
+    gpio_set_dir(MUX_PIN_S2, GPIO_OUT);
+    mux_select_channel(0);
+
     // Inicializar servos PWM
     for (uint i = 0; i < SERVO_COUNT; ++i) {
         gpio_set_function(servos[i].gpio, GPIO_FUNC_PWM);
@@ -224,8 +242,9 @@ int main() {
     printf("Servo PWM started on %u channels at %u Hz\n", SERVO_COUNT, SERVO_FREQUENCY_HZ);
     printf("ADS1115 initialized on I2C0 (GPIO %d=SDA, %d=SCL) at address 0x%02X\n", 
     ADS1115_SDA_PIN, ADS1115_SCL_PIN, ADS1115_ADDR);
+    printf("MUX select pins: S0=%d, S1=%d, S2=%d\n", MUX_PIN_S0, MUX_PIN_S1, MUX_PIN_S2);
     printf("Modo actual: %s\n", modo_5_servos ? "5 servos (dedos)" : "2 servos (pulgar+indice)");
-    printf("Canales ADS1115: 0=Excitar, 1=Horario Muneca, 2=Antihorario Muneca, 3=Cambio Modo\n");
+    printf("Canales MUX -> ADS1115 AIN0: 0=Excitar, 1=Horario Muneca, 2=Antihorario Muneca, 3=Cambio Modo\n");
 
     uint32_t cycle_count = 0;
     senales_control_t senales_actuales = {0, 0, 0, 0};
