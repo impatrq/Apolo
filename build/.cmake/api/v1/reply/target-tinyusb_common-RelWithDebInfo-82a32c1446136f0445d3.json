@@ -1,0 +1,62 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/tinyusb/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "tinyusb_common::@36e52159cb4e937c58c5",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "tinyusb_common_base::@36e52159cb4e937c58c5"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "tinyusb_common_base::@36e52159cb4e937c58c5"
+		}
+	],
+	"name" : "tinyusb_common",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/tinyusb",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/tinyusb"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

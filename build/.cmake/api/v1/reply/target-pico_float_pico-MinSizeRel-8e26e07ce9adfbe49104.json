@@ -1,0 +1,147 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 112,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 121,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_float_pico::@34bdbf50623dcb85eac7",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_float_pico_headers::@34bdbf50623dcb85eac7"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_bootrom::@5b7a36be3eedb58ea3ff"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_float_headers::@34bdbf50623dcb85eac7"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_divider::@5112540209051185ae08"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_float_pico_headers::@34bdbf50623dcb85eac7"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_bootrom::@5b7a36be3eedb58ea3ff"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_float_headers::@34bdbf50623dcb85eac7"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_divider::@5112540209051185ae08"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_aeabi_rp2040.S",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_init_rom_rp2040.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_math.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_float_pico",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_float",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_float"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0,
+				3
+			],
+			"name" : "",
+			"sourceIndexes" : []
+		},
+		{
+			"interfaceSourceIndexes" : 
+			[
+				1,
+				2
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

@@ -1,0 +1,119 @@
+{
+	"abstract" : true,
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mbedtls/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 184,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 111,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 185,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_mbedtls_headers::@889b880c20d67620a3d6",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_mbedtls_crypto_headers::@889b880c20d67620a3d6"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_mbedtls_x509_headers::@889b880c20d67620a3d6"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_mbedtls_tls_headers::@889b880c20d67620a3d6"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_rand_headers::@4c79d50e28622b798e21"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_mbedtls_crypto_headers::@889b880c20d67620a3d6"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_mbedtls_x509_headers::@889b880c20d67620a3d6"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_mbedtls_tls_headers::@889b880c20d67620a3d6"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_rand_headers::@4c79d50e28622b798e21"
+		}
+	],
+	"name" : "pico_mbedtls_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_mbedtls",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_mbedtls"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

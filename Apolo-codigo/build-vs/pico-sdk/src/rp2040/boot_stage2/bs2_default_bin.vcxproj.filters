@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\renzo\Downloads\Apolo\Apolo-codigo\build-vs\CMakeFiles\c2ba028cd0efed04db764787c8c3e78a\bs2_default.bin.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\renzo\Downloads\Apolo\Apolo-codigo\build-vs\CMakeFiles\f5566fc9463072d74be4d8c90dda8993\bs2_default_bin.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\renzo\.pico-sdk\sdk\2.2.0\src\rp2040\boot_stage2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\renzo\Downloads\Apolo\Apolo-codigo\build-vs\pico-sdk\src\rp2040\boot_stage2\CMakeFiles\bs2_default_bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B232353B-4479-3D90-A663-8939D592A2BA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

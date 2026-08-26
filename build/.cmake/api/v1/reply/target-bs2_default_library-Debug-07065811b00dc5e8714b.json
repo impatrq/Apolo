@@ -1,0 +1,153 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "pico-sdk/src/rp2040/boot_stage2/bs2_default_library.dir/Debug/bs2_default_padded_checksummed.obj"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_define_boot_stage2",
+			"add_custom_command",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/boot_stage2/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 104,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 72,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 81,
+				"parent" : 1
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "bs2_default::@efaae0dfea37ab6992ce"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "bs2_default_library::@efaae0dfea37ab6992ce",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "boot_stage2_headers::@efaae0dfea37ab6992ce"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "boot_stage2_headers::@efaae0dfea37ab6992ce"
+		}
+	],
+	"name" : "bs2_default_library",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "bs2_default::@efaae0dfea37ab6992ce"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2040/boot_stage2",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/boot_stage2"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/renzo/Downloads/Apolo/build/pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/fcd569e7650625e3eec10650d8715254/bs2_default_padded_checksummed.S.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/fcd569e7650625e3eec10650d8715254/bs2_default.bin.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

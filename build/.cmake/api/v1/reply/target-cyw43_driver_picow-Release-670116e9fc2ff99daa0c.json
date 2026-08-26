@@ -1,0 +1,208 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries",
+			"add_dependencies",
+			"pico_generate_pio_header"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cyw43_driver/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 52,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 51,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 265,
+				"parent" : 12
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "cyw43_driver_picow::@c2fb4f534018e64680d5",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "cyw43_driver_picow_headers::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "cyw43_driver_picow_headers::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "cyw43_driver::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "cybt_shared_bus::@a80cf95ab9cea25b246d"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "hardware_pio::@e01f79172179c7736f7b"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "hardware_dma::@0fb4e5fe7d96da9dd1e8"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "hardware_exception::@f7caa2d380f625680559"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "cyw43_driver_picow_headers::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "cyw43_driver_picow_headers::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "cyw43_driver::@c2fb4f534018e64680d5"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "cybt_shared_bus::@a80cf95ab9cea25b246d"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "hardware_pio::@e01f79172179c7736f7b"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "hardware_dma::@0fb4e5fe7d96da9dd1e8"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "hardware_exception::@f7caa2d380f625680559"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "cyw43_driver_picow",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 13,
+			"id" : "cyw43_driver_picow_cyw43_bus_pio_spi_pio_h::@c2fb4f534018e64680d5"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_cyw43_driver",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cyw43_driver"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

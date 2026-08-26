@@ -1,0 +1,147 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_simple_hardware_headers_target",
+			"pico_simple_hardware_target",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries",
+			"pico_simple_hardware_impl_target"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_dma/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 120,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 125,
+				"parent" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 89,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 167,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 9
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "hardware_dma_headers::@0fb4e5fe7d96da9dd1e8",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_base_headers::@33789676aab31f619839"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_structs::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_claim_headers::@25444e7956dbbf3aa99e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_platform_headers::@d35835891450e20c80bd"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "hardware_claim_headers::@25444e7956dbbf3aa99e"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_base_headers::@33789676aab31f619839"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_structs::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_claim_headers::@25444e7956dbbf3aa99e"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "pico_platform_headers::@d35835891450e20c80bd"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "hardware_claim_headers::@25444e7956dbbf3aa99e"
+		}
+	],
+	"name" : "hardware_dma_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/hardware_dma",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_dma"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

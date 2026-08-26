@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\renzo\Downloads\Apolo\build\CMakeFiles\3bf57b1278ded2ffe52984cfb6c8bdfe\cyw43_bus_pio_spi.pio.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\renzo\Downloads\Apolo\build\CMakeFiles\0beef7befa1e324d714a8a382a0e4e70\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\renzo\.pico-sdk\sdk\2.2.0\src\rp2_common\pico_cyw43_driver\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\renzo\Downloads\Apolo\build\pico-sdk\src\rp2_common\pico_cyw43_driver\CMakeFiles\cyw43_driver_picow_cyw43_bus_pio_spi_pio_h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F5F5B046-C94C-327A-A5D5-92A77B0DFC8B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

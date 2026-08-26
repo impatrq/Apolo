@@ -1,0 +1,70 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/hardware_structs/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "hardware_structs_headers::@f6e33ac2b299bc3fc920",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "hardware_regs_headers::@993cf3edb526d4d3351b"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "hardware_regs_headers::@993cf3edb526d4d3351b"
+		}
+	],
+	"name" : "hardware_structs_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2040/hardware_structs",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/hardware_structs"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

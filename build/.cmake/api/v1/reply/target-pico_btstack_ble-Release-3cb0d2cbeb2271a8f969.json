@@ -1,0 +1,230 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_btstack/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 81,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 104,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 5
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_btstack_ble::@ea60c734c83cae3783be",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_btstack_ble_headers::@ea60c734c83cae3783be"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_btstack_ble_headers::@ea60c734c83cae3783be"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_btstack_base::@ea60c734c83cae3783be"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "pico_btstack_ble_headers::@ea60c734c83cae3783be"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_btstack_ble_headers::@ea60c734c83cae3783be"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_btstack_base::@ea60c734c83cae3783be"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/att_db.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/att_db_util.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/att_dispatch.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/att_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/battery_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/battery_service_client.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/cycling_power_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/cycling_speed_and_cadence_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/device_information_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/device_information_service_client.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/heart_rate_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/hids_client.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/hids_device.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/nordic_spp_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/ublox_spp_service_server.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt-service/ancs_client.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/gatt_client.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/le_device_db_memory.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/le_device_db_tlv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/ble/sm.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/btstack/src/hci_event_builder.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_btstack_ble",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_btstack",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_btstack"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

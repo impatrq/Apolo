@@ -1,0 +1,91 @@
+{
+	"abstract" : true,
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/cmsis/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 51,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 111,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 59,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "cmsis_core_headers::@1d38ff7600274c0f15cf",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "hardware_clocks_headers::@252b8e5380721ae85cc3"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_platform_headers::@d35835891450e20c80bd"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "hardware_clocks_headers::@252b8e5380721ae85cc3"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_platform_headers::@d35835891450e20c80bd"
+		}
+	],
+	"name" : "cmsis_core_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/cmsis",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/cmsis"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

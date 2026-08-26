@@ -1,0 +1,49 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/ExternalProject/shared_internal_commands.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Linker/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Linker/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Linker/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake
+C:/Users/renzo/.pico-sdk/cmake/pico-vscode.cmake
+C:/Users/renzo/.pico-sdk/picotool/2.2.0-a4/picotool/picotoolConfig.cmake
+C:/Users/renzo/.pico-sdk/picotool/2.2.0-a4/picotool/picotoolConfigVersion.cmake
+C:/Users/renzo/.pico-sdk/picotool/2.2.0-a4/picotool/picotoolTargets-release.cmake
+C:/Users/renzo/.pico-sdk/picotool/2.2.0-a4/picotool/picotoolTargets.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/Platform/PICO.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/generic_board.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/pico_pre_load_platform.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/pico_pre_load_toolchain.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/pico_utils.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/preload/platforms/rp2040.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/preload/toolchains/pico_arm_cortex_m0plus_gcc.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/preload/toolchains/util/find_compiler.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/preload/toolchains/util/pico_arm_gcc_common.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/cmake/preload/toolchains/util/set_flags.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/pico_sdk_init.cmake
+C:/Users/renzo/.pico-sdk/sdk/2.2.0/pico_sdk_version.cmake
+C:/Users/renzo/Downloads/Apolo/Apolo-codigo/CMakeLists.txt
+C:/Users/renzo/Downloads/Apolo/Apolo-codigo/pico_sdk_import.cmake
+C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/4.3.2/CMakeASMCompiler.cmake
+C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/4.3.2/CMakeCCompiler.cmake
+C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/4.3.2/CMakeCXXCompiler.cmake
+C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/4.3.2/CMakeSystem.cmake

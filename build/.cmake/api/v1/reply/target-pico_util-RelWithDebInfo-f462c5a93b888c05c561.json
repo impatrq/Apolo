@@ -1,0 +1,133 @@
+{
+	"abstract" : true,
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_util/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 66,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_util::@ae1b41bac91fbd4bd90b",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "pico_util_headers::@ae1b41bac91fbd4bd90b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_util_headers::@ae1b41bac91fbd4bd90b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_sync::@04b15b98fcb37c7b0422"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "pico_util_headers::@ae1b41bac91fbd4bd90b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_util_headers::@ae1b41bac91fbd4bd90b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_sync::@04b15b98fcb37c7b0422"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_util/datetime.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_util/pheap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_util/queue.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "pico_util",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/common/pico_util",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_util"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

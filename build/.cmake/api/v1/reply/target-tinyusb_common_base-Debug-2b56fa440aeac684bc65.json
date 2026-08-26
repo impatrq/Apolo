@@ -1,0 +1,132 @@
+{
+	"abstract" : true,
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/tinyusb/hw/bsp/rp2040/family.cmake",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/tinyusb/hw/bsp/family_support.cmake",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/tinyusb/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 636,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 73,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "tinyusb_common_base::@36e52159cb4e937c58c5",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "hardware_structs::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "hardware_irq::@381ff19abb5cef8d2924"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "hardware_resets::@622030ee2b89d8666202"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_sync::@04b15b98fcb37c7b0422"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "hardware_structs::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "hardware_irq::@381ff19abb5cef8d2924"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "hardware_resets::@622030ee2b89d8666202"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_sync::@04b15b98fcb37c7b0422"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/tusb.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/tinyusb/src/common/tusb_fifo.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "tinyusb_common_base",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/tinyusb",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/tinyusb"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0,
+				1
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

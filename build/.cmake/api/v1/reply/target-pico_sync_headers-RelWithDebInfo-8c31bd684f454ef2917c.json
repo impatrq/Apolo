@@ -1,0 +1,148 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_sync/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 65,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_sync_headers::@04b15b98fcb37c7b0422",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "hardware_sync_headers::@786cdbe0562c81b78078"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "pico_time_headers::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "pico_sync_sem_headers::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_sync_mutex_headers::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_sync_critical_section_headers::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_time_headers::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_sync_headers::@786cdbe0562c81b78078"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "hardware_sync_headers::@786cdbe0562c81b78078"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "pico_time_headers::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "pico_sync_sem_headers::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pico_sync_mutex_headers::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "pico_sync_critical_section_headers::@04b15b98fcb37c7b0422"
+		},
+		{
+			"backtrace" : 7,
+			"id" : "pico_time_headers::@ed071ba82cca6745b785"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "hardware_sync_headers::@786cdbe0562c81b78078"
+		}
+	],
+	"name" : "pico_sync_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/common/pico_sync",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/common/pico_sync"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

@@ -1,0 +1,109 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"pico_define_boot_stage2",
+			"add_custom_command"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/boot_stage2/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 104,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 72,
+				"parent" : 1
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "bs2_default::@efaae0dfea37ab6992ce"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "bs2_default_bin::@efaae0dfea37ab6992ce",
+	"name" : "bs2_default_bin",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "bs2_default::@efaae0dfea37ab6992ce"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2040/boot_stage2",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2040/boot_stage2"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "C:/Users/renzo/Downloads/Apolo/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/7af93800c89a632938cfc386ba499571/bs2_default_bin.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/renzo/Downloads/Apolo/build/CMakeFiles/fcd569e7650625e3eec10650d8715254/bs2_default.bin.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

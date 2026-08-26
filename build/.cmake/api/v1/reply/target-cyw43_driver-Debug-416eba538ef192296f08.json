@@ -1,0 +1,110 @@
+{
+	"abstract" : true,
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_impl_library",
+			"pico_add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cyw43_driver/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 2
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "cyw43_driver::@c2fb4f534018e64680d5",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "cyw43_driver_headers::@c2fb4f534018e64680d5"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "cyw43_driver_headers::@c2fb4f534018e64680d5"
+		}
+	],
+	"interfaceSources" : 
+	[
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/cyw43-driver/src/cyw43_ll.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/cyw43-driver/src/cyw43_stats.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/cyw43-driver/src/cyw43_lwip.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/lib/cyw43-driver/src/cyw43_ctrl.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "cyw43_driver",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_cyw43_driver",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cyw43_driver"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			],
+			"name" : "Source Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

@@ -1,0 +1,91 @@
+{
+	"abstract" : true,
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"pico_add_library",
+			"target_link_libraries",
+			"pico_mirrored_target_link_libraries"
+		],
+		"files" : 
+		[
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/CMakeLists.txt",
+			"C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 111,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "pico_crt0_headers::@16576375c08f837c0ec0",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "hardware_structs_headers::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_regs_headers::@993cf3edb526d4d3351b"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "hardware_structs_headers::@f6e33ac2b299bc3fc920"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "hardware_regs_headers::@993cf3edb526d4d3351b"
+		}
+	],
+	"name" : "pico_crt0_headers",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_crt0",
+		"source" : "C:/Users/renzo/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}
