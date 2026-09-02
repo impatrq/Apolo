@@ -1,18 +1,17 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/clocks.h"
 #include "hardware/gpio.h"
 #include "hardware/i2c.h"
 #include "hardware/pwm.h"
 
-// Configuraci�n de cada servo: pin GPIO y pulsos m�nimos, neutros y m�ximos en microsegundos.
+// Configuracion de cada servo: pin GPIO y pulsos minimos, neutros y maximos en microsegundos.
 typedef struct {
     uint gpio;
     uint32_t min_pulse_us;
     uint32_t neutral_pulse_us;
     uint32_t max_pulse_us;
 } servo_config_t;
-
 #define SERVO_COUNT 6
 static const servo_config_t servos[SERVO_COUNT] = {
     {0, 500u, 1510u, 2500u},   // Pulgar
@@ -25,30 +24,37 @@ static const servo_config_t servos[SERVO_COUNT] = {
 
 // Servo de muñeca (controlado por señales de giro horario/antihorario)
 #define SERVO_MUNECA_IDX 5  // Índice del servo de muñeca
-#define SERVO_PULGAR_IDX 0  // �ndice del pulgar
-#define SERVO_INDICE_IDX 1  // �ndice del �ndice
+#define SERVO_PULGAR_IDX 0  // Índice del pulgar
+#define SERVO_INDICE_IDX 1  // Índice del Índice
 
 #define SERVO_FREQUENCY_HZ 50u
 #define SERVO_FRAME_US (1000000u / SERVO_FREQUENCY_HZ)
 #define SERVO_SWEEP_DELAY_MS 20
 
-// ADS1115 conectado al Pico v�a I2C
+// ADS1115 conectado al Pico va I2C
 #define ADS1115_I2C i2c0
 #define ADS1115_SDA_PIN 16
 #define ADS1115_SCL_PIN 17
-#define ADS1115_ADDR 0x48  // Direcci�n I2C del ADS1115 (ADDR a GND)
+#define ADS1115_ADDR 0x48  // Dirección I2C del ADS1115 (ADDR a GND)
 #define ADS1115_CONVERSION_REGISTER 0x00
 #define ADS1115_CONFIG_REGISTER 0x01
 
+// Multiplexor de 4 canales con salida a ADS1115 AIN0.
+// S0-S2 seleccionan el canal. No se usa S3 porque solo hay 4 entradas activas.
+#define MUX_PIN_S0 18  // GP18
+#define MUX_PIN_S1 19  // GP19
+#define MUX_PIN_S2 20  // GP20
+#define MUX_CHANNEL_COUNT 4
+
 // Variables de estado
-static bool modo_5_servos = true;  // true = 5 servos, false = 2 servos (pulgar+�ndice)
+static bool modo_5_servos = true;  // true = 5 servos, false = 2 servos (pulgar+indice)
 
 // Estructura de datos de los 4 canales EMG del ADS1115
 typedef struct {
-    uint16_t canal_excitAR;      // Canal 0 ADS1115: se�al para excitar servos
-    uint16_t canal_horario;     // Canal 1 ADS1115: se�al giro horario mu�eca
-    uint16_t canal_antihorario; // Canal 2 ADS1115: se�al giro antihorario mu�eca
-    uint16_t canal_modo;        // Canal 3 ADS1115: se�al cambio de modo
+    uint16_t canal_excitAR;      // Canal 0 ADS1115: señal para excitar servos
+    uint16_t canal_horario;     // Canal 1 ADS1115: señal giro horario muñeca
+    uint16_t canal_antihorario; // Canal 2 ADS1115: señal giro antihorario muñeca
+    uint16_t canal_modo;        // Canal 3 ADS1115: señal cambio de modo
 } senales_control_t;
 
 // Par�metros PWM para los servos
@@ -79,15 +85,17 @@ static bool ads1115_read_conversion(uint8_t addr, int16_t *value) {
     return true;
 }
 
-static bool ads1115_read_channel(uint8_t addr, uint8_t channel, uint16_t *raw) {
-    uint16_t config;
-    switch (channel) {
-        case 0: config = 0xC583; break; // AIN0-GND, 128SPS
-        case 1: config = 0xD583; break; // AIN1-GND, 128SPS
-        case 2: config = 0xE583; break; // AIN2-GND, 128SPS
-        case 3: config = 0xF583; break; // AIN3-GND, 128SPS
-        default: return false;
-    }
+static void mux_select_channel(uint8_t channel) {
+    gpio_put(MUX_PIN_S0, channel & 0x1);
+    gpio_put(MUX_PIN_S1, (channel >> 1) & 0x1);
+    gpio_put(MUX_PIN_S2, (channel >> 2) & 0x1);
+}
+
+static bool ads1115_read_mux_channel(uint8_t addr, uint8_t mux_channel, uint16_t *raw) {
+    mux_select_channel(mux_channel);
+    sleep_ms(1);
+
+    uint16_t config = 0xC583; // AIN0-GND, 128SPS, +/-4.096V
     if (!ads1115_write_config(addr, config)) return false;
     sleep_ms(10);
 
@@ -98,11 +106,11 @@ static bool ads1115_read_channel(uint8_t addr, uint8_t channel, uint16_t *raw) {
     return true;
 }
 
-// Leer los 4 canales del ADS1115
+// Leer los 4 canales del multiplexor conectados a la entrada AIN0 del ADS1115
 static bool leer_senales_ads1115(senales_control_t *datos) {
-    for (uint8_t canal = 0; canal < 4; canal++) {
+    for (uint8_t canal = 0; canal < MUX_CHANNEL_COUNT; canal++) {
         uint16_t valor_raw;
-        if (!ads1115_read_channel(ADS1115_ADDR, canal, &valor_raw)) {
+        if (!ads1115_read_mux_channel(ADS1115_ADDR, canal, &valor_raw)) {
             return false;
         }
         
@@ -117,7 +125,7 @@ static bool leer_senales_ads1115(senales_control_t *datos) {
 }
 
 // Procesar cambio de modo con detector de pulso de 500ms
-// Se detecta cuando el canal 3 supera un umbral (se�al presente)
+// Se detecta cuando el canal 3 supera un umbral (señal presente)
 static void procesar_cambio_modo(uint16_t valor_canal_modo) {
     static uint32_t tiempo_pulso_inicio = 0;
     static bool en_pulso = false;
@@ -125,7 +133,7 @@ static void procesar_cambio_modo(uint16_t valor_canal_modo) {
     
     uint32_t tiempo_actual = to_ms_since_boot(get_absolute_time());
     
-    // Umbral para detectar se�al activa (aprox 1V = 32768 counts del ADC)
+    // Umbral para detectar señal activa (aprox 1V = 32768 counts del ADC)
     bool seal_activa = valor_canal_modo > 30000;
     
     if (seal_activa && !ultimo_estado && !en_pulso) {
@@ -133,7 +141,7 @@ static void procesar_cambio_modo(uint16_t valor_canal_modo) {
         tiempo_pulso_inicio = tiempo_actual;
         en_pulso = true;
     } else if (!seal_activa && en_pulso) {
-        // Fin de pulso - verificar duraci�n
+        // Fin de pulso - verificar duración
         uint32_t duracion_pulso = tiempo_actual - tiempo_pulso_inicio;
         
         // Si el pulso dura entre 400ms y 600ms, cambiar modo
@@ -148,7 +156,7 @@ static void procesar_cambio_modo(uint16_t valor_canal_modo) {
     ultimo_estado = seal_activa;
 }
 
-// Mover servo de mu�eca en sentido horario
+// Mover servo de muñeca en sentido horario
 static void mover_servo_muneca_horario(uint32_t *pulse_us) {
     if (*pulse_us < servos[SERVO_MUNECA_IDX].max_pulse_us) {
         *pulse_us += 20;  // Incremento por paso
@@ -158,7 +166,7 @@ static void mover_servo_muneca_horario(uint32_t *pulse_us) {
     }
 }
 
-// Mover servo de mu�eca en sentido antihorario
+// Mover servo de muñeca en sentido antihorario
 static void mover_servo_muneca_antihorario(uint32_t *pulse_us) {
     if (*pulse_us > servos[SERVO_MUNECA_IDX].min_pulse_us) {
         *pulse_us -= 20;  // Decremento por paso
@@ -168,20 +176,61 @@ static void mover_servo_muneca_antihorario(uint32_t *pulse_us) {
     }
 }
 
-// Calcular �ngulo del servo seg�n amplitud de se�al EMG
-// Mapear valor ADC (0-65535) a pulso (500-2500 us)
-static uint32_t calcular_pulso_desde_amplitud(uint16_t amplitud) {
-    uint32_t pulso = 500 + (amplitud * 2000UL / 65535UL);
-    
-    // Limitar entre min y max
-    if (pulso < 500) pulso = 500;
-    if (pulso > 2500) pulso = 2500;
-    
-    return pulso;
+#define EMG_THRESHOLD 2000u // Ajustar según calibración del ADS1115 y el sensor EMG
+
+static const uint32_t finger_open_angle[5] = {170u, 170u, 170u, 170u, 110u};
+static const uint32_t finger_close_angle[5] = {0u, 0u, 0u, 0u, 0u};
+
+static uint32_t map_angle_to_pulse(uint32_t servo_index, uint32_t angle_deg) {
+    if (angle_deg > 180u) angle_deg = 180u;
+    uint32_t min_pulse = servos[servo_index].min_pulse_us;
+    uint32_t max_pulse = servos[servo_index].max_pulse_us;
+    return min_pulse + ((angle_deg * (max_pulse - min_pulse)) / 180u);
 }
 
-// Verificar si hay se�al activa en el canal (umbral)
-static bool seal_activa(uint16_t valor) {
+static void set_servo_angle(uint32_t servo_index, uint32_t angle_deg, uint32_t *pulse_us) {
+    pulse_us[servo_index] = map_angle_to_pulse(servo_index, angle_deg);
+    pwm_set_gpio_level(servos[servo_index].gpio, servo_pulse_to_level(pulse_us[servo_index]));
+}
+
+static void open_hand(uint32_t *pulse_us) {
+    for (uint i = 0; i < 5; ++i) {
+        set_servo_angle(i, finger_open_angle[i], pulse_us);
+    }
+}
+
+static void close_hand(uint32_t *pulse_us) {
+    for (uint i = 0; i < 5; ++i) {
+        set_servo_angle(i, finger_close_angle[i], pulse_us);
+    }
+}
+
+static void open_two_servos(uint32_t *pulse_us) {
+    set_servo_angle(SERVO_PULGAR_IDX, finger_open_angle[SERVO_PULGAR_IDX], pulse_us);
+    set_servo_angle(SERVO_INDICE_IDX, finger_open_angle[SERVO_INDICE_IDX], pulse_us);
+    for (uint i = 0; i < SERVO_COUNT; ++i) {
+        if (i == SERVO_MUNECA_IDX) continue;
+        if (i != SERVO_PULGAR_IDX && i != SERVO_INDICE_IDX) {
+            pulse_us[i] = servos[i].neutral_pulse_us;
+            pwm_set_gpio_level(servos[i].gpio, servo_pulse_to_level(pulse_us[i]));
+        }
+    }
+}
+
+static void close_two_servos(uint32_t *pulse_us) {
+    set_servo_angle(SERVO_PULGAR_IDX, finger_close_angle[SERVO_PULGAR_IDX], pulse_us);
+    set_servo_angle(SERVO_INDICE_IDX, finger_close_angle[SERVO_INDICE_IDX], pulse_us);
+    for (uint i = 0; i < SERVO_COUNT; ++i) {
+        if (i == SERVO_MUNECA_IDX) continue;
+        if (i != SERVO_PULGAR_IDX && i != SERVO_INDICE_IDX) {
+            pulse_us[i] = servos[i].neutral_pulse_us;
+            pwm_set_gpio_level(servos[i].gpio, servo_pulse_to_level(pulse_us[i]));
+        }
+    }
+}
+
+// Verificar si hay señal activa en el canal (umbral)
+static bool señal_activa(uint16_t valor) {
     return valor > 30000;  // Umbral ~1.5V
 }
 
@@ -212,6 +261,15 @@ int main() {
     gpio_pull_up(ADS1115_SDA_PIN);
     gpio_pull_up(ADS1115_SCL_PIN);
 
+    // Inicializar pines del multiplexor
+    gpio_init(MUX_PIN_S0);
+    gpio_init(MUX_PIN_S1);
+    gpio_init(MUX_PIN_S2);
+    gpio_set_dir(MUX_PIN_S0, GPIO_OUT);
+    gpio_set_dir(MUX_PIN_S1, GPIO_OUT);
+    gpio_set_dir(MUX_PIN_S2, GPIO_OUT);
+    mux_select_channel(0);
+
     // Inicializar servos PWM
     for (uint i = 0; i < SERVO_COUNT; ++i) {
         gpio_set_function(servos[i].gpio, GPIO_FUNC_PWM);
@@ -224,8 +282,9 @@ int main() {
     printf("Servo PWM started on %u channels at %u Hz\n", SERVO_COUNT, SERVO_FREQUENCY_HZ);
     printf("ADS1115 initialized on I2C0 (GPIO %d=SDA, %d=SCL) at address 0x%02X\n", 
     ADS1115_SDA_PIN, ADS1115_SCL_PIN, ADS1115_ADDR);
+    printf("MUX select pins: S0=%d, S1=%d, S2=%d\n", MUX_PIN_S0, MUX_PIN_S1, MUX_PIN_S2);
     printf("Modo actual: %s\n", modo_5_servos ? "5 servos (dedos)" : "2 servos (pulgar+indice)");
-    printf("Canales ADS1115: 0=Excitar, 1=Horario Muneca, 2=Antihorario Muneca, 3=Cambio Modo\n");
+    printf("Canales MUX -> ADS1115 AIN0: 0=Excitar, 1=Horario Muneca, 2=Antihorario Muneca, 3=Cambio Modo\n");
 
     uint32_t cycle_count = 0;
     senales_control_t senales_actuales = {0, 0, 0, 0};
@@ -236,15 +295,15 @@ int main() {
             // Procesar cambio de modo (canal 3)
             procesar_cambio_modo(senales_actuales.canal_modo);
             
-            // Procesar se�ales de giro de mu�eca (canales 1 y 2)
-            if (seal_activa(senales_actuales.canal_horario)) {
+            // Procesar señales de giro de muñeca (canales 1 y 2)
+            if (señal_activa(senales_actuales.canal_horario)) {
                 mover_servo_muneca_horario(&pulse_us[SERVO_MUNECA_IDX]);
                 pwm_set_gpio_level(servos[SERVO_MUNECA_IDX].gpio, servo_pulse_to_level(pulse_us[SERVO_MUNECA_IDX]));
                 if (cycle_count % 50 == 0) {
                     printf("Muneca giro horario: pulso %u us\n", pulse_us[SERVO_MUNECA_IDX]);
                 }
             }
-            if (seal_activa(senales_actuales.canal_antihorario)) {
+            if (señal_activa(senales_actuales.canal_antihorario)) {
                 mover_servo_muneca_antihorario(&pulse_us[SERVO_MUNECA_IDX]);
                 pwm_set_gpio_level(servos[SERVO_MUNECA_IDX].gpio, servo_pulse_to_level(pulse_us[SERVO_MUNECA_IDX]));
                 if (cycle_count % 50 == 0) {
@@ -252,42 +311,26 @@ int main() {
                 }
             }
             
-            // Procesar se�al de excitar (canal 0) seg�n el modo actual
-            uint32_t pulso_ejecutar = calcular_pulso_desde_amplitud(senales_actuales.canal_excitAR);
-            
-            if (modo_5_servos) {
-                // Modo 5 servos: mover todos los dedos (excluir muñeca)
-                for (uint i = 0; i < SERVO_COUNT; ++i) {
-                    if (i == SERVO_MUNECA_IDX) continue;  // no tocar muñeca
+            // Procesar señal de excitar (canal 0) según el modo actual y el umbral EMG
+            bool emg_activa = senales_actuales.canal_excitAR > EMG_THRESHOLD;
 
-                    pulse_us[i] = pulso_ejecutar;
-                    pwm_set_gpio_level(
-                        servos[i].gpio,
-                        servo_pulse_to_level(pulse_us[i])
-                    );
+            if (modo_5_servos) {
+                if (emg_activa) {
+                    close_hand(pulse_us);
+                } else {
+                    open_hand(pulse_us);
                 }
                 if (cycle_count % 50 == 0) {
-                    printf("Modo 5 servos: excitar=%u -> pulso=%u us\n", senales_actuales.canal_excitAR, pulso_ejecutar);
+                    printf("Modo 5 servos: EMG=%u -> %s\n", senales_actuales.canal_excitAR, emg_activa ? "cerrar" : "abrir");
                 }
             } else {
-                // Modo 2 servos: mover solo pulgar e �ndice
-                uint servos_activos[2] = {SERVO_PULGAR_IDX, SERVO_INDICE_IDX};
-                for (uint j = 0; j < 2; ++j) {
-                    uint i = servos_activos[j];
-                    if (i == SERVO_MUNECA_IDX) continue;  // no tocar muñeca
-                    pulse_us[i] = pulso_ejecutar;
-                    pwm_set_gpio_level(servos[i].gpio, servo_pulse_to_level(pulse_us[i]));
-                }
-                // Los otros servos se mantienen en posición neutral (excluir muñeca)
-                for (uint i = 0; i < SERVO_COUNT; ++i) {
-                    if (i == SERVO_MUNECA_IDX) continue;  // no tocar muñeca
-                    if (i != SERVO_PULGAR_IDX && i != SERVO_INDICE_IDX) {
-                        pulse_us[i] = servos[i].neutral_pulse_us;
-                        pwm_set_gpio_level(servos[i].gpio, servo_pulse_to_level(pulse_us[i]));
-                    }
+                if (emg_activa) {
+                    close_two_servos(pulse_us);
+                } else {
+                    open_two_servos(pulse_us);
                 }
                 if (cycle_count % 50 == 0) {
-                    printf("Modo 2 servos (pulgar+indice): excitar=%u -> pulso=%u us\n", senales_actuales.canal_excitAR, pulso_ejecutar);
+                    printf("Modo 2 servos (pulgar+indice): EMG=%u -> %s\n", senales_actuales.canal_excitAR, emg_activa ? "cerrar" : "abrir");
                 }
             }
         } else {
